@@ -2,7 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -24,10 +27,10 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:scheme="https"
                     android:host="app.fitticoins.com"
+                    android:path="/FittiCoinWebApi_live3/V4.0"
                     android:port="2053"
-                    android:path="/FittiCoinWebApi_live3/V4.0" />
+                    android:scheme="https" />
             </intent-filter>
         </activity>
         <activity
